@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Keep exifr's optional Node fs/zlib support intact on the server.
+  serverExternalPackages: ["exifr"],
   async headers() {
     return [{
       source: "/:path*",

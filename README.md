@@ -2,7 +2,7 @@
 
 A small Next.js application that uses Cloudinary to remove embedded GPS metadata from JPEG and PNG photos, then checks the stored image before making it available to download.
 
-[Source code](https://github.com/musebe/cloudinary-photo-privacy)
+[Live demo](https://cloudinary-photo-privacy.vercel.app/) · [Source code](https://github.com/musebe/cloudinary-photo-privacy)
 
 The page shows the original and checked output side by side, with the detected GPS field names, dimensions, and file sizes. It does not show coordinates. A saved synthetic example makes the public demo usable without uploading a personal photo.
 
