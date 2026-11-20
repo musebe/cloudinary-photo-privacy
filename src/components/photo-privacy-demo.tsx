@@ -15,6 +15,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { MAX_PHOTO_BYTES, resultSchema, type PhotoInspection, type SanitizationResult } from "@/lib/privacy/contracts";
 
 const byteLabel = (bytes: number) => `${(bytes / 1000).toFixed(1)} kB`;
+const checkedDate = (timestamp: string) => new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Africa/Nairobi", day: "numeric", month: "short", year: "numeric",
+}).format(new Date(timestamp));
 
 function PhotoCard({ title, description, src, inspection }: {
   title: string; description: string; src?: string; inspection?: PhotoInspection;
@@ -178,7 +181,7 @@ export function PhotoPrivacyDemo({ demo, liveUploads }: { demo: SanitizationResu
         {result ? <Card>
           <CardHeader>
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="flex flex-col gap-1"><CardTitle>{result.verification.status === "gps_removed" ? "GPS metadata removed" : "No tested GPS fields detected"}</CardTitle><CardDescription>{result.source === "saved" ? `Saved result · checked ${result.verification.checkedAt.slice(0, 10)}` : "Current upload · stored asset read back and checked"}</CardDescription></div>
+              <div className="flex flex-col gap-1"><CardTitle>{result.verification.status === "gps_removed" ? "GPS metadata removed" : "No tested GPS fields detected"}</CardTitle><CardDescription>{result.source === "saved" ? `Saved result · checked ${checkedDate(result.verification.checkedAt)}` : "Current upload · stored asset read back and checked"}</CardDescription></div>
               <Badge variant="secondary"><Check data-icon="inline-start" />Stored file verified</Badge>
             </div>
           </CardHeader>

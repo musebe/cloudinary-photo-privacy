@@ -2,6 +2,8 @@
 
 A small Next.js application that uses Cloudinary to remove embedded GPS metadata from JPEG and PNG photos, then checks the stored image before making it available to download.
 
+[Source code](https://github.com/musebe/cloudinary-photo-privacy)
+
 The page shows the original and checked output side by side, with the detected GPS field names, dimensions, and file sizes. It does not show coordinates. A saved synthetic example makes the public demo usable without uploading a personal photo.
 
 ## How it works
@@ -55,6 +57,10 @@ pnpm build
 ```
 
 `pnpm fixtures` recreates the synthetic input matrix using Sharp and ExifTool. ExifTool is an offline development tool, not a production service. The matrix is not a completed live Cloudinary benchmark; live results must be recorded separately.
+
+Browser checks use an installed Google Chrome and a running application. Start `pnpm dev` first, or set `TEST_BASE_URL` to the running instance you want to check. The browser tests do not upload photos to Cloudinary.
+
+The included saved example was produced through the real Cloudinary pipeline, not by stripping metadata locally. Its input contains seven detected GPS fields; the stored, downloaded output contains zero. ExifTool independently checks the result. A second live EXIF-orientation-6 case normalized from 1200 × 800 to 800 × 1200. These two checks are not a 30-image live benchmark. See [evidence](docs/evidence/).
 
 ## Project map
 
