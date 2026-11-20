@@ -1,0 +1,851 @@
+{
+  "version": "photo-privacy-fixtures-v1",
+  "createdAt": "2026-11-20T21:22:05.196Z",
+  "provenance": "Original SVG illustration rendered locally with Sharp. All GPS metadata is fictitious, injected only for testing. No camera photograph or customer data is included.",
+  "oracle": {
+    "tool": "ExifTool",
+    "version": "13.64",
+    "mode": "Raw numeric group-prefixed metadata read, not runtime exifr"
+  },
+  "sourceReferences": [
+    "https://photostructure.github.io/exiftool-vendored.js/",
+    "https://exiftool.org/TagNames/GPS.html",
+    "https://exiftool.org/TagNames/XMP.html"
+  ],
+  "scope": "Prepared offline inputs only. No Cloudinary uploads, sanitization benchmark, or live pass rate is established by this manifest.",
+  "summary": {
+    "total": 30,
+    "supportedRasterInputs": 28,
+    "gpsPresent": 20,
+    "noGpsControls": 8,
+    "rejectInputs": 2
+  },
+  "liveDemoCandidates": {
+    "default": "jpeg-exif-gps-orientation-1",
+    "rotated": "jpeg-exif-gps-orientation-6"
+  },
+  "fixtures": [
+    {
+      "id": "jpeg-exif-gps-orientation-1",
+      "format": "jpeg",
+      "orientation": 1,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/jpeg-exif-gps-orientation-1.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 1,
+      "bytes": 43380,
+      "sha256": "47383865f08766a49e738e4716e1f8b157f999d8e853a93e3739a28183855457"
+    },
+    {
+      "id": "jpeg-exif-gps-orientation-2",
+      "format": "jpeg",
+      "orientation": 2,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/jpeg-exif-gps-orientation-2.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 2,
+      "bytes": 43380,
+      "sha256": "9c6f2561f3d86f5e0a7d38e5c7be3e9b6177cdd8df0679d6b7885604fabf0769"
+    },
+    {
+      "id": "jpeg-exif-gps-orientation-3",
+      "format": "jpeg",
+      "orientation": 3,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/jpeg-exif-gps-orientation-3.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 3,
+      "bytes": 43380,
+      "sha256": "6bff38fea61d272bd899f036a9c28f91b8ae62536db763a569d98aa429e2b7e6"
+    },
+    {
+      "id": "jpeg-exif-gps-orientation-4",
+      "format": "jpeg",
+      "orientation": 4,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/jpeg-exif-gps-orientation-4.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 4,
+      "bytes": 43380,
+      "sha256": "1013e4f7ddb0b5e2ebd7b67a34f5a1f300fb107e707a0d3367764d767f4d71e5"
+    },
+    {
+      "id": "jpeg-exif-gps-orientation-5",
+      "format": "jpeg",
+      "orientation": 5,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/jpeg-exif-gps-orientation-5.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 5,
+      "bytes": 43380,
+      "sha256": "68b38b89d2a332fb679e47622e437ea9e77e496feea12b9d495ef0a898589f00"
+    },
+    {
+      "id": "jpeg-exif-gps-orientation-6",
+      "format": "jpeg",
+      "orientation": 6,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/jpeg-exif-gps-orientation-6.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 6,
+      "bytes": 43380,
+      "sha256": "8e9fa21157038babf7c0e6d2fd42591bd4dab1e97028f476a46719d4b3ea1992"
+    },
+    {
+      "id": "jpeg-exif-gps-orientation-7",
+      "format": "jpeg",
+      "orientation": 7,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/jpeg-exif-gps-orientation-7.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 7,
+      "bytes": 43380,
+      "sha256": "2371c766c78ffe1d7cb69156acf01150a392f0ab7d7fac35a686c73e7286988c"
+    },
+    {
+      "id": "jpeg-exif-gps-orientation-8",
+      "format": "jpeg",
+      "orientation": 8,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/jpeg-exif-gps-orientation-8.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 8,
+      "bytes": 43380,
+      "sha256": "b0a7fa916d66b9fe697e62420e8d0e2f8a76b2273f4295e0e408168cbdbf87d5"
+    },
+    {
+      "id": "png-exif-gps-orientation-1",
+      "format": "png",
+      "orientation": 1,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/png-exif-gps-orientation-1.png",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 1,
+      "bytes": 54706,
+      "sha256": "0f6233417863faa519a66953e74ccf6461cc5bed5df480f675bd20a60713cca3"
+    },
+    {
+      "id": "png-exif-gps-orientation-2",
+      "format": "png",
+      "orientation": 2,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/png-exif-gps-orientation-2.png",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 2,
+      "bytes": 54706,
+      "sha256": "8c6f526876cff9ac3a1b9c970f7c7c4773151cddfd614441fd0c5e166e56c663"
+    },
+    {
+      "id": "png-exif-gps-orientation-3",
+      "format": "png",
+      "orientation": 3,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/png-exif-gps-orientation-3.png",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 3,
+      "bytes": 54706,
+      "sha256": "bda6a02c0d212334ea141d36e8c7c6caecfc1a54e1945f21b44fd96c1bfc44a3"
+    },
+    {
+      "id": "png-exif-gps-orientation-4",
+      "format": "png",
+      "orientation": 4,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/png-exif-gps-orientation-4.png",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 4,
+      "bytes": 54706,
+      "sha256": "dc01f1440ee4e23a40cfd7be67d10b96eac2931f7c6481c8f1077842e6c3e5b0"
+    },
+    {
+      "id": "png-exif-gps-orientation-5",
+      "format": "png",
+      "orientation": 5,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/png-exif-gps-orientation-5.png",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 5,
+      "bytes": 54706,
+      "sha256": "1309e7014f3531098ca6b52023d23656a5f18916a6fcaaee097665a8ba3c099b"
+    },
+    {
+      "id": "png-exif-gps-orientation-6",
+      "format": "png",
+      "orientation": 6,
+      "gpsContainer": "EXIF",
+      "input": "fixtures/inputs/png-exif-gps-orientation-6.png",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "Composite:GPSLatitude",
+        "Composite:GPSLongitude",
+        "Composite:GPSPosition",
+        "EXIF:GPSAltitude",
+        "EXIF:GPSAltitudeRef",
+        "EXIF:GPSLatitude",
+        "EXIF:GPSLatitudeRef",
+        "EXIF:GPSLongitude",
+        "EXIF:GPSLongitudeRef",
+        "EXIF:GPSVersionID"
+      ],
+      "oracleOrientation": 6,
+      "bytes": 54706,
+      "sha256": "1154fb34f38d4e7a6641d2b9017cd49ba5621db4c3546eb3ea2dd948d3b72e51"
+    },
+    {
+      "id": "jpeg-xmp-gps-orientation-1",
+      "format": "jpeg",
+      "orientation": 1,
+      "gpsContainer": "XMP",
+      "input": "fixtures/inputs/jpeg-xmp-gps-orientation-1.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "XMP:GPSAltitude",
+        "XMP:GPSAltitudeRef"
+      ],
+      "oracleOrientation": 1,
+      "bytes": 46101,
+      "sha256": "8e89ff5854d09277a7bb6adb3391a4bcf45437809c7df4ecb1df5f415cdb6fd7"
+    },
+    {
+      "id": "jpeg-xmp-gps-orientation-2",
+      "format": "jpeg",
+      "orientation": 2,
+      "gpsContainer": "XMP",
+      "input": "fixtures/inputs/jpeg-xmp-gps-orientation-2.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "XMP:GPSAltitude",
+        "XMP:GPSAltitudeRef"
+      ],
+      "oracleOrientation": 2,
+      "bytes": 46101,
+      "sha256": "1436f7d0035bed29546d1d3e8b30122503580c61f694ee31673f0b3aa74f88c8"
+    },
+    {
+      "id": "jpeg-xmp-gps-orientation-3",
+      "format": "jpeg",
+      "orientation": 3,
+      "gpsContainer": "XMP",
+      "input": "fixtures/inputs/jpeg-xmp-gps-orientation-3.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "XMP:GPSAltitude",
+        "XMP:GPSAltitudeRef"
+      ],
+      "oracleOrientation": 3,
+      "bytes": 46101,
+      "sha256": "431cb26555b590abe52533e3fa5b09057e1daed824ed3d9ee4d6802b7b751645"
+    },
+    {
+      "id": "jpeg-xmp-gps-orientation-4",
+      "format": "jpeg",
+      "orientation": 4,
+      "gpsContainer": "XMP",
+      "input": "fixtures/inputs/jpeg-xmp-gps-orientation-4.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "XMP:GPSAltitude",
+        "XMP:GPSAltitudeRef"
+      ],
+      "oracleOrientation": 4,
+      "bytes": 46101,
+      "sha256": "26438d0766a5a29d3ff60fd754e972734c6b7f03dea19181beb3d6197920355e"
+    },
+    {
+      "id": "jpeg-xmp-gps-orientation-5",
+      "format": "jpeg",
+      "orientation": 5,
+      "gpsContainer": "XMP",
+      "input": "fixtures/inputs/jpeg-xmp-gps-orientation-5.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "XMP:GPSAltitude",
+        "XMP:GPSAltitudeRef"
+      ],
+      "oracleOrientation": 5,
+      "bytes": 46101,
+      "sha256": "6ee6dc22fa714d8edb4e7f6a4569a550bef2ed1fc1f68147e1a869f492a88d72"
+    },
+    {
+      "id": "jpeg-xmp-gps-orientation-6",
+      "format": "jpeg",
+      "orientation": 6,
+      "gpsContainer": "XMP",
+      "input": "fixtures/inputs/jpeg-xmp-gps-orientation-6.jpg",
+      "expected": "accept",
+      "goal": "remove_gps",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": true,
+      "oracleGpsFields": [
+        "Composite:GPSAltitude",
+        "XMP:GPSAltitude",
+        "XMP:GPSAltitudeRef"
+      ],
+      "oracleOrientation": 6,
+      "bytes": 46101,
+      "sha256": "b1d45a8c1ca372245259ee5cbd7ece81e7b1915de393ba2ae268bfb9ea6af8a2"
+    },
+    {
+      "id": "jpeg-no-gps-orientation-1",
+      "format": "jpeg",
+      "orientation": 1,
+      "gpsContainer": "none",
+      "input": "fixtures/inputs/jpeg-no-gps-orientation-1.jpg",
+      "expected": "accept",
+      "goal": "no_gps_control",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": false,
+      "oracleGpsFields": [],
+      "oracleOrientation": 1,
+      "bytes": 43222,
+      "sha256": "bfacca6666c5ac1e2a0bdd9f8b3512828fd088d8abb3eb50b0f778a4292cf054"
+    },
+    {
+      "id": "jpeg-no-gps-orientation-3",
+      "format": "jpeg",
+      "orientation": 3,
+      "gpsContainer": "none",
+      "input": "fixtures/inputs/jpeg-no-gps-orientation-3.jpg",
+      "expected": "accept",
+      "goal": "no_gps_control",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": false,
+      "oracleGpsFields": [],
+      "oracleOrientation": 3,
+      "bytes": 43222,
+      "sha256": "541471b3b5f77dfee7e2f20d3cb0bf5fdbce62a8114c8755fbcce202b4a95d30"
+    },
+    {
+      "id": "jpeg-no-gps-orientation-6",
+      "format": "jpeg",
+      "orientation": 6,
+      "gpsContainer": "none",
+      "input": "fixtures/inputs/jpeg-no-gps-orientation-6.jpg",
+      "expected": "accept",
+      "goal": "no_gps_control",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": false,
+      "oracleGpsFields": [],
+      "oracleOrientation": 6,
+      "bytes": 43222,
+      "sha256": "1932e4cec5938948fcce9e99d4a711599212e4a397bfb158c057e6af6ae42262"
+    },
+    {
+      "id": "jpeg-no-gps-orientation-8",
+      "format": "jpeg",
+      "orientation": 8,
+      "gpsContainer": "none",
+      "input": "fixtures/inputs/jpeg-no-gps-orientation-8.jpg",
+      "expected": "accept",
+      "goal": "no_gps_control",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": false,
+      "oracleGpsFields": [],
+      "oracleOrientation": 8,
+      "bytes": 43222,
+      "sha256": "13bd3aa91f05b39a8844607e42132185e1eace8dad17827c54c4cc58bed3ae48"
+    },
+    {
+      "id": "png-no-gps-orientation-1",
+      "format": "png",
+      "orientation": 1,
+      "gpsContainer": "none",
+      "input": "fixtures/inputs/png-no-gps-orientation-1.png",
+      "expected": "accept",
+      "goal": "no_gps_control",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": false,
+      "oracleGpsFields": [],
+      "oracleOrientation": 1,
+      "bytes": 54548,
+      "sha256": "64e1ba89f95989cb925886793ad845af72f1003ef5e3a3f9eccbc006caf4ea2a"
+    },
+    {
+      "id": "png-no-gps-orientation-3",
+      "format": "png",
+      "orientation": 3,
+      "gpsContainer": "none",
+      "input": "fixtures/inputs/png-no-gps-orientation-3.png",
+      "expected": "accept",
+      "goal": "no_gps_control",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedGpsPresent": false,
+      "oracleGpsFields": [],
+      "oracleOrientation": 3,
+      "bytes": 54548,
+      "sha256": "1be87e2395cdebff96e534186514bc2ebe4532650f167a43285195ec9673fda6"
+    },
+    {
+      "id": "png-no-gps-orientation-6",
+      "format": "png",
+      "orientation": 6,
+      "gpsContainer": "none",
+      "input": "fixtures/inputs/png-no-gps-orientation-6.png",
+      "expected": "accept",
+      "goal": "no_gps_control",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": false,
+      "oracleGpsFields": [],
+      "oracleOrientation": 6,
+      "bytes": 54548,
+      "sha256": "e586a32cd0886da5ea659ea8720232b6253da77e0d1b469ef97ceb5564552959"
+    },
+    {
+      "id": "png-no-gps-orientation-8",
+      "format": "png",
+      "orientation": 8,
+      "gpsContainer": "none",
+      "input": "fixtures/inputs/png-no-gps-orientation-8.png",
+      "expected": "accept",
+      "goal": "no_gps_control",
+      "sourceDimensions": {
+        "width": 1200,
+        "height": 800
+      },
+      "expectedNormalizedDimensions": {
+        "width": 800,
+        "height": 1200
+      },
+      "expectedGpsPresent": false,
+      "oracleGpsFields": [],
+      "oracleOrientation": 8,
+      "bytes": 54548,
+      "sha256": "56e4b5bea0c8ea0c1f24ae19f1720cef0e06b6f9fedfce87621727badb85f540"
+    },
+    {
+      "id": "malformed-truncated",
+      "input": "fixtures/inputs/malformed-truncated.jpg",
+      "expected": "reject",
+      "reason": "Truncated JPEG with an incomplete EXIF container",
+      "bytes": 10
+    },
+    {
+      "id": "unsupported-vector",
+      "input": "fixtures/inputs/unsupported-vector.svg",
+      "expected": "reject",
+      "reason": "SVG is outside the accepted JPEG/PNG formats",
+      "bytes": 2240
+    }
+  ]
+}

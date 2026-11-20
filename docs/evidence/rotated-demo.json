@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-11-20T21:29:03.504Z",
+  "fixture": "fixtures/inputs/jpeg-exif-gps-orientation-6.jpg",
+  "operation": "Real Next.js route -> incoming Cloudinary force_strip -> persisted readback -> protected original download",
+  "sourceSha256": "8e9fa21157038babf7c0e6d2fd42591bd4dab1e97028f476a46719d4b3ea1992",
+  "outputSha256": "9216545e2576c2f1e5d40fcfe084f683946302762a4f27ec36511fa9ac7def82",
+  "before": {
+    "format": "jpeg",
+    "bytes": 43380,
+    "width": 1200,
+    "height": 800,
+    "orientation": 6,
+    "gpsFields": [
+      "GPSAltitude",
+      "GPSAltitudeRef",
+      "GPSLatitude",
+      "GPSLatitudeRef",
+      "GPSLongitude",
+      "GPSLongitudeRef",
+      "GPSVersionID"
+    ]
+  },
+  "after": {
+    "format": "jpeg",
+    "bytes": 35590,
+    "width": 800,
+    "height": 1200,
+    "orientation": null,
+    "gpsFields": []
+  },
+  "independentOracle": {
+    "tool": "ExifTool",
+    "version": "13.64",
+    "residualGpsFields": []
+  },
+  "rawSourceUploadedAsPublicAsset": false,
+  "cloudinaryUploadCount": 1,
+  "liveBenchmarkComplete": false
+}

@@ -1,4 +1,4 @@
-import * as exifr from "exifr";
+import exifr from "exifr";
 import sharp from "sharp";
 import { MAX_PHOTO_BYTES, MAX_PIXELS, type PhotoInspection } from "./contracts";
 import { metadataContainers, photoFormat } from "./containers";
@@ -14,10 +14,12 @@ const parserOptions = {
 };
 
 function gpsKeys(value: unknown, inGpsBlock = false): string[] {
-  if (!value || typeof value !== "object") return [];
+  if (!value || typeof value !== "object" || Array.isArray(value) || ArrayBuffer.isView(value)) return [];
   return Object.entries(value).flatMap(([key, child]) => {
     const gpsBlock = inGpsBlock || key.toLowerCase() === "gps";
-    const own = /gps/i.test(key) || (inGpsBlock && child !== undefined) ? [key] : [];
+    const own = /gps/i.test(key) && !["gps", "gpsifd"].includes(key.toLowerCase())
+      ? [key]
+      : inGpsBlock && /^\d+$/.test(key) ? [`GPS tag ${key}`] : [];
     return [...own, ...gpsKeys(child, gpsBlock)];
   });
 }

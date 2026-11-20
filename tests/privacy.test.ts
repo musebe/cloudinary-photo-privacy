@@ -38,6 +38,7 @@ describe("byte-level inspection", () => {
     const result = await inspectPhoto(withGps(await jpeg()));
     expect(result.gpsFields).toContain("GPSVersionID");
     expect(result.gpsFields).toContain("GPSLatitudeRef");
+    expect(result.gpsFields.every(field => /GPS/.test(field))).toBe(true);
   });
 
   test("reads a clean PNG", async () => {
