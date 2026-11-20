@@ -5,7 +5,11 @@ import result from "../../public/demo/result.json" with { type: "json" };
 
 test("loads the saved comparison with decoded images and no overflow", async ({ page }) => {
   const errors: string[] = [];
+  const processingCalls: string[] = [];
   page.on("pageerror", error => errors.push(error.message));
+  page.on("request", request => {
+    if (request.url().includes("/api/sanitize") || new URL(request.url()).hostname.endsWith("cloudinary.com")) processingCalls.push(request.url());
+  });
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Share the photo.");
   await expect(page.getByText("GPS metadata removed", { exact: true })).toBeVisible();
@@ -16,6 +20,10 @@ test("loads the saved comparison with decoded images and no overflow", async ({ 
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.screenshot({ path: `.private/screenshots/${test.info().project.name}.png`, fullPage: true });
   expect(errors).toEqual([]);
+  expect(processingCalls).toEqual([]);
+  await page.reload();
+  await expect(page.getByText("GPS metadata removed", { exact: true })).toBeVisible();
+  expect(processingCalls).toEqual([]);
 });
 
 test("downloads the exact checked file", async ({ page }) => {

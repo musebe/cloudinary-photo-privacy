@@ -1,0 +1,9 @@
+.git
+.env*
+.private
+test-results
+playwright-report
+fixtures
+tests
+scripts
+docs

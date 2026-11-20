@@ -1,0 +1,38 @@
+{
+  "source": "saved",
+  "before": {
+    "format": "jpeg",
+    "bytes": 43380,
+    "width": 1200,
+    "height": 800,
+    "orientation": 1,
+    "gpsFields": [
+      "GPSAltitude",
+      "GPSAltitudeRef",
+      "GPSLatitude",
+      "GPSLatitudeRef",
+      "GPSLongitude",
+      "GPSLongitudeRef",
+      "GPSVersionID"
+    ]
+  },
+  "after": {
+    "format": "jpeg",
+    "bytes": 32421,
+    "width": 1200,
+    "height": 800,
+    "orientation": null,
+    "gpsFields": []
+  },
+  "verification": {
+    "status": "gps_removed",
+    "checkedAt": "2026-11-20T21:28:14.257Z",
+    "sha256": "3f06ad023db4e7ae92fade13391cfce3c2a9250f5bdb7083fca8a2c46caaf273",
+    "storedAssetReadback": true
+  },
+  "image": {
+    "src": "/demo/after.jpg",
+    "filename": "photo-without-gps.jpg",
+    "mimeType": "image/jpeg"
+  }
+}
