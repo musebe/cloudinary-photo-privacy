@@ -1,12 +1,12 @@
-**Source and assets:** [Live demo](https://cloudinary-photo-privacy.vercel.app/) · [GitHub repository](https://github.com/musebe/cloudinary-photo-privacy) · [Captured evidence](https://github.com/musebe/cloudinary-photo-privacy/tree/main/docs/evidence) · [Article media](./article-media.json) · [Article brief](./article-handoff.md)
-
-**Cloudinary media folder:** `article-screenshots/cloudinary-photo-privacy`.
-
 # Remove GPS Metadata From Uploaded Photos With Next.js and Cloudinary
 
 To remove embedded GPS metadata from uploaded photos, apply Cloudinary's `force_strip` flag as an incoming transformation, retrieve the stored image on your server, and inspect its bytes before offering a download. Return the file you inspected, not a separately optimized preview. Incoming transformations change the image before Cloudinary stores it. [Cloudinary incoming transformations](https://cloudinary.com/documentation/eager_and_incoming_transformations#incoming_transformations).
 
 This tutorial implements that workflow in Next.js. You will validate a JPEG or PNG, use authenticated Cloudinary storage, check the stored result, and show a before-and-after comparison with shadcn/ui. The application removes embedded metadata, not information visible in the picture, and its checks do not guarantee anonymity.
+
+**Source and assets:** [Live demo](https://cloudinary-photo-privacy.vercel.app/) · [GitHub repository](https://github.com/musebe/cloudinary-photo-privacy) · [Captured evidence](https://github.com/musebe/cloudinary-photo-privacy/tree/main/docs/evidence) · [Article media](https://github.com/musebe/cloudinary-photo-privacy/blob/main/docs/article-media.json) · [Article brief](https://github.com/musebe/cloudinary-photo-privacy/blob/main/docs/article-handoff.md)
+
+**Cloudinary media folder:** `article-screenshots/cloudinary-photo-privacy`.
 
 ## Why uploaded photos can reveal a location
 
@@ -34,7 +34,7 @@ The public demo serves a captured real result without uploading another photo or
   Your browser does not support embedded video. Read the linked walkthrough transcript below.
 </video>
 
-*The 50-second walkthrough shows the saved result, real upload/readback code, and an independent file check. It includes quiet instrumental music, no spoken narration, and no new photo upload. [Read the walkthrough transcript](./video-transcript.md).*
+*The 50-second walkthrough shows the saved result, real upload/readback code, and an independent file check. It includes quiet instrumental music, no spoken narration, and no new photo upload. [Read the walkthrough transcript](https://github.com/musebe/cloudinary-photo-privacy/blob/main/docs/video-transcript.md).*
 
 ## How the verified photo workflow works
 

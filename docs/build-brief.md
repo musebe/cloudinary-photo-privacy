@@ -48,4 +48,4 @@ Keep the 30-fixture article benchmark separate from the minimum demo. Use only s
 
 ## Documentation evidence
 
-Record exact versions, fixed upload options, persisted readbacks, source/output hashes, parser scope, tests, failures, and fixture provenance as work completes. Write the article from those results later: source/assets first, literal Markdown body, short brief, conclusion before FAQs, no deployment chapter. Screenshots must hide secrets; every article video must be an embed. Public publishing and form submission remain separate from deploying the requested demo.
+Record exact versions, fixed upload options, persisted readbacks, source/output hashes, parser scope, tests, failures, and fixture provenance as work completes. Write the article from those results: source/assets after the introduction (updated editorial request), literal Markdown body, short separate brief, conclusion before FAQs, no deployment chapter. Screenshots must hide secrets; every article video must be an embed. Public publishing and form submission remain separate from deploying the requested demo.

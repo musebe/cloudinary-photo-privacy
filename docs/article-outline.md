@@ -71,7 +71,7 @@ Capture at a readable scale with native macOS tools where appropriate. Crop to t
 ## Editorial and search guardrails
 
 - Keep the article concise; approximately 1,800–2,400 words is a planning envelope, not a ranking target. Preserve important validation, setup, and limitations even if the final length differs.
-- Descriptive sentence-case headings, no “Step 1” chapter labels, short paragraphs, literal Markdown body, and source/assets links at the top of the editorial document.
+- Descriptive sentence-case headings, no “Step 1” chapter labels, short paragraphs, and a literal Markdown body. Put the article's source/assets links after the introduction, following the updated request. Keep the separate brief's links near its top.
 - Focus on one intent: removing GPS metadata from uploaded photos in Next.js. Natural secondary terms include EXIF location, Cloudinary incoming transformations, and verified image downloads.
 - Differentiation: existing metadata tools and guides explain removal; this article demonstrates an authenticated storage workflow with independent stored-byte inspection and a checksum-bound download.
 - Use answer-first paragraphs, nearby primary citations, extractable evidence tables, descriptive internal links, and crawlable captions/transcripts. No keyword stuffing or ranking/AI-citation guarantee.
