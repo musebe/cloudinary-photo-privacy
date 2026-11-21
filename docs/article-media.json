@@ -1,0 +1,89 @@
+{
+  "folder": "article-screenshots/cloudinary-photo-privacy",
+  "verifiedAt": "2026-11-21T07:39:09.055Z",
+  "assets": [
+    {
+      "name": "01-before-after-2026-11-21",
+      "url": "https://res.cloudinary.com/demo-article-projects/image/upload/v1795246680/article-screenshots/cloudinary-photo-privacy/01-before-after-2026-11-21.png",
+      "type": "image",
+      "alt": "Photo Privacy saved comparison showing seven GPS fields before Cloudinary processing and no tested GPS fields after processing.",
+      "width": 1920,
+      "height": 881,
+      "bytes": 394185,
+      "sha256": "01489815c1df24af570b0c127f1d9690bf66c2015c015256ba3f0fb626a70975",
+      "exactDelivery": true,
+      "contentType": "image/png"
+    },
+    {
+      "name": "02-checked-report-2026-11-21",
+      "url": "https://res.cloudinary.com/demo-article-projects/image/upload/v1795246681/article-screenshots/cloudinary-photo-privacy/02-checked-report-2026-11-21.png",
+      "type": "image",
+      "alt": "Stored-image verification report with GPS field names, dimensions, orientation and download checksum; no coordinate values are displayed.",
+      "width": 1920,
+      "height": 883,
+      "bytes": 155514,
+      "sha256": "08ee4c4978ab983bc95e62b8a9a06c5b5d9d22100e72d75b11523b25b8b4fd25",
+      "exactDelivery": true,
+      "contentType": "image/png"
+    },
+    {
+      "name": "03-cloudinary-upload-code-2026-11-21-r2",
+      "url": "https://res.cloudinary.com/demo-article-projects/image/upload/v1795246684/article-screenshots/cloudinary-photo-privacy/03-cloudinary-upload-code-2026-11-21-r2.png",
+      "type": "image",
+      "alt": "Actual VS Code screenshot of the Cloudinary authenticated upload excerpt with incoming force_strip.",
+      "width": 3024,
+      "height": 1898,
+      "bytes": 555898,
+      "sha256": "517b222adc6374bfe6d7c3e418446d461887e14ebf99c4342506e3dbdad75aa2",
+      "exactDelivery": true,
+      "contentType": "image/png"
+    },
+    {
+      "name": "04-independent-check-2026-11-21-r2",
+      "url": "https://res.cloudinary.com/demo-article-projects/image/upload/v1795246685/article-screenshots/cloudinary-photo-privacy/04-independent-check-2026-11-21-r2.png",
+      "type": "image",
+      "alt": "Actual terminal output from ExifTool 13.64 showing seven EXIF GPS fields in the synthetic input and zero in the checked image, with a matching SHA-256 checksum.",
+      "width": 2416,
+      "height": 585,
+      "bytes": 124095,
+      "sha256": "453877670684336dfbea12c57063718e38408f01ad3889d901259b6fba938ab5",
+      "exactDelivery": true,
+      "contentType": "image/png"
+    },
+    {
+      "name": "05-walkthrough-poster-2026-11-21-r3",
+      "url": "https://res.cloudinary.com/demo-article-projects/image/upload/v1795246687/article-screenshots/cloudinary-photo-privacy/05-walkthrough-poster-2026-11-21-r3.png",
+      "type": "image",
+      "alt": "Poster for the Photo Privacy saved-result and code walkthrough.",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 333123,
+      "sha256": "fb93ffdb34829d5a542cbcd8df538982a31d32f9083fefb4533f6b40d4916145",
+      "exactDelivery": true,
+      "contentType": "image/png"
+    },
+    {
+      "name": "06-photo-privacy-walkthrough-2026-11-21-r3",
+      "url": "https://res.cloudinary.com/demo-article-projects/video/upload/v1795246691/article-screenshots/cloudinary-photo-privacy/06-photo-privacy-walkthrough-2026-11-21-r3.mp4",
+      "type": "video",
+      "alt": "Photo Privacy walkthrough: saved comparison, real Cloudinary upload and readback code, and independent metadata verification. Soft instrumental background; no spoken narration.",
+      "width": 1920,
+      "height": 1080,
+      "duration": 49.6,
+      "bytes": 2530780,
+      "sha256": "3cba9c91a3d1f76397f61e68f2dbbd06f4d66b616b1ed1722a1d2a402959500b",
+      "exactDelivery": true,
+      "contentType": "video/mp4;codecs=avc1"
+    },
+    {
+      "name": "07-photo-privacy-walkthrough.en.vtt",
+      "url": "https://res.cloudinary.com/demo-article-projects/raw/upload/v1795246693/article-screenshots/cloudinary-photo-privacy/07-photo-privacy-walkthrough.en.vtt",
+      "type": "raw",
+      "alt": "English descriptive captions for the Photo Privacy walkthrough.",
+      "bytes": 500,
+      "sha256": "5ccccfb6b4a464ce1de5951bbfba4d743e3a199b8c6e9b251184e3ed4d9ff3ca",
+      "exactDelivery": true,
+      "contentType": "text/vtt"
+    }
+  ]
+}

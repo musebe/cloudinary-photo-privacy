@@ -70,6 +70,8 @@ The included saved example was produced through the real Cloudinary pipeline, no
 - `public/demo/`: intentionally public synthetic before/after example and captured report.
 - `fixtures/`: synthetic test inputs and expectations.
 - `docs/build-brief.md`: scope, decisions, and build checkpoints.
+- `docs/article.md`: the source-linked tutorial, embedded walkthrough, and verified results.
+- `docs/article-media.json`: public Cloudinary article assets and integrity checks; capture notes and a video transcript sit beside it.
 
 ## References
 

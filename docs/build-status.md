@@ -1,6 +1,6 @@
 # Build status
 
-Checked November 21, 2026, Africa/Nairobi. The application is implemented; article drafting has not started.
+Checked November 21, 2026, Africa/Nairobi. The application, article draft, and supporting media are implemented. Editorial and publisher review remain.
 
 ## Completed
 
@@ -14,8 +14,11 @@ Checked November 21, 2026, Africa/Nairobi. The application is implemented; artic
 - [GitHub repository](https://github.com/musebe/cloudinary-photo-privacy) created and pushed with commits per completed stage. [Vercel production demo](https://cloudinary-photo-privacy.vercel.app/) is live; it keeps live upload disabled.
 - Public smoke checks passed: home, health, report, and both synthetic images return 200; health reports configured Cloudinary and disabled live uploads; POST is denied with structured JSON. The public output hash matches the captured evidence.
 - Six deployed browser checks passed across desktop and mobile: fresh load/refresh, image decode, no overflow, no Cloudinary/processing requests, exact download hash, and corrupt-download blocking. Two local-file selection checks are intentionally skipped on the public deployment because its input is disabled; those passed locally.
+- Wrote the literal Markdown tutorial in `docs/article.md`, with short source-linked code excerpts, scoped evidence tables, limitations, conclusion, and FAQs last. The brief stays separate and includes short Melinda and Design messages.
+- Captured native macOS demo/editor screenshots and a 49.6-second walkthrough with real scrolls, code, a successful independent metadata check, quiet original instrumental music, English captions, and a transcript. Uploaded seven media assets into `article-screenshots/cloudinary-photo-privacy`; persisted folder checks and original-delivery hashes passed.
+- Tested the exact article video embed for decoded playback, seeking, four loaded caption cues, and no media error. Capture-owned Chrome and VS Code instances were closed; personal tabs were untouched. Re-ran 53 tests, lint, type check, and production build successfully.
 
 ## Remaining
 
-- Write the article later from the evidence, then conduct its editorial/media review. Do not describe the offline fixture matrix as a completed live benchmark.
+- Conduct editorial review, a full video watch/listen, cover design, and publisher-specific canonical/byline/structured-data and embed checks. Do not describe the offline fixture matrix as a completed live benchmark.
 - Before enabling anonymous uploads, add appropriate identity, quotas/rate limits, monitoring, and retention/deletion controls. The demo does not claim anonymity, removal of visible information, or legal compliance.

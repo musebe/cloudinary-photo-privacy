@@ -4,11 +4,11 @@
 - [GitHub repository](https://github.com/musebe/cloudinary-photo-privacy)
 - [Saved before image](../public/demo/before.jpg), [checked output](../public/demo/after.jpg), and [captured report](../public/demo/result.json)
 - [Ordinary JPEG evidence](./evidence/saved-demo.json) and [rotated JPEG evidence](./evidence/rotated-demo.json)
-- Planned article-media folder: `article-screenshots/cloudinary-photo-privacy`. Screenshots and recordings have not been produced for the article yet.
+- Article-media folder: `article-screenshots/cloudinary-photo-privacy`. See the [verified media manifest](./article-media.json), [capture notes](./capture-notes.md), and [completed draft](./article.md).
 
 # Article outline: Remove GPS Metadata From Uploaded Photos With Next.js and Cloudinary
 
-Status: proposed TOC, November 21, 2026. This file is an editorial plan, not the finished article.
+Status: outline implemented in the draft, November 21, 2026. This file preserves the editorial plan; the finished draft is `article.md`.
 
 ## Opening
 
@@ -62,7 +62,7 @@ Use about six focused excerpts, normally 8–20 lines and never a long file dump
 | --- | --- |
 | Before/after screenshot | Near the demo: same visible scene, seven GPS fields versus zero, clearly labeled saved result |
 | Architecture diagram | Before setup: Cloudinary owns stripping/storage; Next.js owns validation and download release |
-| Current Cloudinary Console screenshot | Near readback: existing processed asset in its project folder and relevant properties; the Console view alone does not prove GPS removal |
+| Cloudinary implementation screenshot | Actual isolated VS Code view of authenticated upload and incoming stripping; no Console capture or fresh upload is implied |
 | Independent-check screenshot | Near results: readable ExifTool output for saved files, field names/counts and orientation, no coordinates or secrets |
 | One short embedded walkthrough | Demo and implementation: compare, inspect report, show upload/readback code, download, and check the downloaded file; clearly label saved evidence rather than staging a fresh upload |
 

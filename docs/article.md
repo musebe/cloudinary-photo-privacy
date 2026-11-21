@@ -1,4 +1,6 @@
-**Source and assets:** [Live demo](https://cloudinary-photo-privacy.vercel.app/) · [GitHub repository](https://github.com/musebe/cloudinary-photo-privacy) · [Captured evidence](https://github.com/musebe/cloudinary-photo-privacy/tree/main/docs/evidence) · [Article brief](./article-handoff.md)
+**Source and assets:** [Live demo](https://cloudinary-photo-privacy.vercel.app/) · [GitHub repository](https://github.com/musebe/cloudinary-photo-privacy) · [Captured evidence](https://github.com/musebe/cloudinary-photo-privacy/tree/main/docs/evidence) · [Article media](./article-media.json) · [Article brief](./article-handoff.md)
+
+**Cloudinary media folder:** `article-screenshots/cloudinary-photo-privacy`.
 
 # Remove GPS Metadata From Uploaded Photos With Next.js and Cloudinary
 
@@ -20,11 +22,19 @@ Open [Photo Privacy](https://cloudinary-photo-privacy.vercel.app/). The saved sy
 
 Expand **See the field names and download checksum**, then select **Download checked image**. The browser checks the downloaded bytes against the recorded SHA-256 checksum before saving them.
 
-<!-- IMAGE_DEMO -->
+![Photo Privacy saved comparison showing seven GPS fields before Cloudinary processing and no tested GPS fields after processing.](https://res.cloudinary.com/demo-article-projects/image/upload/v1795246680/article-screenshots/cloudinary-photo-privacy/01-before-after-2026-11-21.png)
+
+*The same synthetic scene before and after the real Cloudinary pipeline. Counts describe detected metadata, not visible differences.*
 
 The public demo serves a captured real result without uploading another photo or making another Cloudinary processing request. New uploads are disabled publicly to bound account usage. Local configuration enables the full upload path. The included input has fictitious coordinates and contains no customer data.
 
-<!-- VIDEO_WALKTHROUGH -->
+<video controls playsinline preload="metadata" crossorigin="anonymous" width="1920" height="1080" poster="https://res.cloudinary.com/demo-article-projects/image/upload/v1795246687/article-screenshots/cloudinary-photo-privacy/05-walkthrough-poster-2026-11-21-r3.png" aria-label="Photo Privacy saved-result and Cloudinary code walkthrough" style="width:100%;height:auto">
+  <source src="https://res.cloudinary.com/demo-article-projects/video/upload/v1795246691/article-screenshots/cloudinary-photo-privacy/06-photo-privacy-walkthrough-2026-11-21-r3.mp4" type="video/mp4">
+  <track kind="captions" src="https://res.cloudinary.com/demo-article-projects/raw/upload/v1795246693/article-screenshots/cloudinary-photo-privacy/07-photo-privacy-walkthrough.en.vtt" srclang="en" label="English" default>
+  Your browser does not support embedded video. Read the linked walkthrough transcript below.
+</video>
+
+*The 50-second walkthrough shows the saved result, real upload/readback code, and an independent file check. It includes quiet instrumental music, no spoken narration, and no new photo upload. [Read the walkthrough transcript](./video-transcript.md).*
 
 ## How the verified photo workflow works
 
@@ -66,6 +76,8 @@ ENABLE_LIVE_UPLOADS=true
 ```
 
 Run `pnpm dev` and open the printed local URL. Restart the server after environment changes. Never add `NEXT_PUBLIC_` to the API secret or include credentials in screenshots. Leave live uploads disabled when you only need the saved example. [Next.js environment variables](https://nextjs.org/docs/app/guides/environment-variables).
+
+`CLOUDINARY_ASSET_FOLDER` organizes assets in dynamic-folder environments. In fixed-folder environments, the public-ID prefix determines the folder instead; this implementation uses `photo-privacy/`. Folder organization and restricted delivery are separate settings. [Cloudinary folder modes](https://cloudinary.com/documentation/folder_modes).
 
 The excerpts below highlight the important boundaries; their linked source files contain the complete implementations.
 
@@ -118,7 +130,7 @@ The `authenticated` delivery type restricts both the original and derived assets
 
 ## Read back and verify the stored image
 
-Read the persisted asset using its immutable asset ID. Validate the returned identity, namespace, delivery type, format, size, and dimensions before downloading the original through a short-lived server-only URL. The Admin API is rate-limited, so budget for these reads. [Cloudinary asset-ID readback](https://cloudinary.com/documentation/admin_api_resources_get_resources_by_asset_ids).
+Read the persisted asset using its immutable asset ID. Validate the returned identity, namespace, delivery type, format, size, and dimensions before downloading the original through a short-lived server-only URL. The Admin API is rate-limited, so budget for these reads. [Cloudinary asset-ID readback](https://cloudinary.com/documentation/admin_api#get_resources_by_asset_ids).
 
 The pipeline makes the sequence explicit:
 
@@ -167,7 +179,9 @@ A matching checksum establishes that the bytes match the inspected result. It do
 
 The shadcn/ui screen shows before/after counts, dimensions, orientation, and an expandable field list. It uses the exact local or returned bytes for previews, avoiding an image optimizer that would create another rendition. Selecting a new file clears the previous result, so an old success state cannot approve a different photo. [Complete comparison and download component](https://github.com/musebe/cloudinary-photo-privacy/blob/main/src/components/photo-privacy-demo.tsx).
 
-<!-- IMAGE_REPORT -->
+![Stored-image verification report with GPS field names, dimensions, orientation and download checksum; no coordinate values are displayed.](https://res.cloudinary.com/demo-article-projects/image/upload/v1795246681/article-screenshots/cloudinary-photo-privacy/02-checked-report-2026-11-21.png)
+
+*The report identifies the checked output. The checksum binds the download to that file; it is not itself a privacy test.*
 
 ## Check the results and failure cases
 
@@ -180,7 +194,9 @@ Two live synthetic JPEG cases passed through the actual Next.js route, Cloudinar
 
 Both inputs were 1200 × 800 with 43,380 bytes. The rotated case verified normalized dimensions and an orientation reference, not universal visual fidelity or lossless encoding. The size difference is an observation, not a metadata-only savings measurement.
 
-<!-- IMAGE_CHECK -->
+![Actual terminal output from ExifTool 13.64 showing seven EXIF GPS fields in the synthetic input and zero in the checked image, with a matching SHA-256 checksum.](https://res.cloudinary.com/demo-article-projects/image/upload/v1795246685/article-screenshots/cloudinary-photo-privacy/04-independent-check-2026-11-21-r2.png)
+
+*An independent check of the saved input and output. EXIF GPS tags are counted here; ExifTool's derived composite fields are not treated as additional stored tags.*
 
 The repository separates evidence by what it proves:
 

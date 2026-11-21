@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-21T07:43:16.405Z",
+  "links": {
+    "checked": 26,
+    "failed": []
+  },
+  "embed": {
+    "duration": 49.6,
+    "width": 1920,
+    "height": 1080,
+    "captionCues": 4,
+    "playing": true,
+    "seekChecked": true,
+    "error": null
+  },
+  "video": {
+    "duration": 49.6,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "sha256": "3cba9c91a3d1f76397f61e68f2dbbd06f4d66b616b1ed1722a1d2a402959500b",
+    "fullDecode": true,
+    "music": "Original quiet instrumental; no vocals or keyboard effects"
+  },
+  "articleAudit": {
+    "errors": 0,
+    "warnings": 3,
+    "note": "Warnings are media URLs in required HTML attributes, not bare URLs in prose."
+  },
+  "application": {
+    "unitTestsPassed": 53,
+    "lint": true,
+    "typecheck": true,
+    "build": true
+  },
+  "reviewScope": "Screenshot/contact-sheet inspection and technical validation; not a completed full watch/listen or publication/CMS audit.",
+  "cleanup": "Capture-owned browser context and VS Code instances closed; personal windows/tabs untouched."
+}
